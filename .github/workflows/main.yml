@@ -23,8 +23,8 @@ jobs:
         file: ./ci_cd_na_pratica/Dockerfile
         push: true
         tags: |
-          kaualcaya/aprendizado:v1
-          kaualcaya/aprendizado:latest
+          alcaya/kaualcaya:v1
+          alcaya/kaualcaya:latest
 
 
     
