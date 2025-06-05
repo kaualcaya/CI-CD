@@ -6,7 +6,7 @@ on:
 
 jobs: 
   Ci: 
-    runs-on: ubunto-lastest
+    runs-on: ubuntu-latest
     
     steps:   
     - uses: actions/checkout@v4.2.2
@@ -20,7 +20,7 @@ jobs:
       uses: docker/build-push-action@v6.18.0
       with: 
         context: ./ci_cd_na_pratica
-        file: /ci_cd_na_pratica/Dockerfile
+        file: ./ci_cd_na_pratica/Dockerfile
         push: true
         tags: |
           kaualcaya/aprendizado:v1
