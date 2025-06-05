@@ -1,0 +1,24 @@
+name: CI-CD
+
+on:
+  push:
+    branches: ["main"]
+
+jobs: 
+  Ci: 
+    runs-on: ubunto-lastest
+    
+    steps:   
+    - uses: actions/checkout@v4.2.2
+    - name: construindo imagem docker 
+      uses: docker/build-push-action@v6.18.0
+      with: 
+        context: ./ci_cd_na_pratica
+        file: /ci_cd_na_pratica/Dockerfile
+        push: true
+        tags: |
+          kaualcaya/aprendizado:v1
+          kaualcaya/aprendizado:latest
+
+
+    
